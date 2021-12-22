@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">SurfCampsApp</string>
+    <string name="surfcampsapp">SurfCampsApp</string>
+    <string name="surfcampsapp_logo">SurfCampsAppLogo</string>
+    <string name="button_home">Inicio</string>
+    <string name="button_search">Procurar</string>
+    <string name="button_profile">Perfil</string>
+    <string name="button_support">Suporte</string>
+    <string name="button_login">Login</string>
+    <string name="button_register">Registar</string>
+    <string name="button_confirm">Confirmar</string>
+    <string name="button_save_changes">Guardar Alterações</string>
+    <string name="forgot_pw_button">Esqueceu Password</string>
+    <string name="login_usertext">Utilizador:</string>
+    <string name="login_passwordtext">Password:</string>
+    <string name="registo_confpass">Confirmar Password:</string>
+    <string name="login_button">Entrar</string>
+    <string name="userinfo_first_name">Primeiro Nome:</string>
+    <string name="userinfo_last_name">Último Nome:</string>
+    <string name="userinfo_email">E-mail:</string>
+    <string name="userinfo_NIF">NIF:</string>
+    <string name="userinfo_address">Morada:</string>
+    <string name="userinfo_gender">Género:</string>
+    <string name="userinfo_nationality">Nacionalidade:</string>
+    <string name="userinfo_birthday">D. Nascimento:</string>
+    <string name="userinfo_image">Avatar</string>
+    <string name="userinfo_create">Criação/Edição</string>
+    <string name="userinfo_profileName">Perfil de Utilizador</string>
+    <string name="button_edit_profile">Editar Perfil</string>
+    <string name="button_logoff">Log out</string>
+    <string name="button_classes">Minhas Aulas</string>
+
+    <string-array name="ofertas">
+        <item>Selecione uma Oferta</item>
+        <item>520€ (3 dias / 3 noites)</item>
+        <item>710€ (6 dias / 6 noites)</item>
+        <item>930€ (9 dias / 9 noites)</item>
+        <item><b>PROMOÇÃO:</b> 950€ (10 dias / 10 noites) </item>
+    </string-array>
+
+    <string-array name="mes">
+        <item>Mês</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="ano">
+        <item>Ano</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+        <item>2028</item>
+        <item>2029</item>
+        <item>2030</item>
+        <item>2031</item>
+        <item>2032</item>
+    </string-array>
+
+</resources>

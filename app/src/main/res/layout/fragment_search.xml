@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/imgBtnStorpes"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#00FFFFFF"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kalux"
+            android:visibility="visible"
+            tools:src="@drawable/kalux"
+            tools:srcCompat="@drawable/kalux" />
+
+        <TextView
+            android:id="@+id/txtKalux"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kalux Surf (Sines)"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Kalux Surf (Sines)" />
+
+        <ImageButton
+            android:id="@+id/imgBtnAlentejoSurfCamp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#00FFFFFF"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/alentejosurfcamp"
+            tools:src="@drawable/alentejosurfcamp"
+            tools:srcCompat="@drawable/alentejosurfcamp" />
+
+        <TextView
+            android:id="@+id/txtAlentejoSurfCamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alentejo Surf Camp (Vila Nova de Milfontes)"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Alentejo Surf Camp (Vila Nova de Milfontes)" />
+
+        <ImageButton
+            android:id="@+id/imgBtnEriceiraSurfCamp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#00FFFFFF"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ericeirasurf"
+            tools:src="@drawable/ericeirasurf"
+            tools:srcCompat="@drawable/ericeirasurf" />
+
+        <TextView
+            android:id="@+id/txtEriceiraSurfCamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ericeira SurfCamp (Ericeira)"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Ericeira SurfCamp (Ericeira)" />
+
+        <ImageButton
+            android:id="@+id/imgBtnSurfMilfontes"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#00FFFFFF"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/surfmilfontes"
+            tools:src="@drawable/surfmilfontes"
+            tools:srcCompat="@drawable/surfmilfontes" />
+
+        <TextView
+            android:id="@+id/txtSurfMilfontes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SurfMilfontes (Vila Nova de Milfontes)"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="SurfMilfontes (Vila Nova de Milfontes)" />
+    </LinearLayout>
+</ScrollView>

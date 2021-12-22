@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtPN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="                    "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.391"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <TextView
+        android:id="@+id/txtUN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="                      "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.132" />
+
+    <TextView
+        android:id="@+id/txtPackage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="                    "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toEndOf="@+id/txtPacote"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.237" />
+
+    <TextView
+        android:id="@+id/txtPaymentUltimoNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/userinfo_last_name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.129"
+        tools:text="@string/userinfo_last_name" />
+
+    <TextView
+        android:id="@+id/txtPaymentPrimeiroNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/userinfo_first_name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.074"
+        tools:text="@string/userinfo_first_name" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="                   "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toEndOf="@+id/txtDataReserva"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.186" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="141dp"
+        android:layout_height="165dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.425">
+
+        <RadioButton
+            android:id="@+id/rbCartao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="onClickRB"
+            android:text="Cartão de Crédito"
+            app:layout_constraintBottom_toTopOf="@+id/rbGooglePay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.077"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rbPaypal"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <RadioButton
+            android:id="@+id/rbPaypal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickRB"
+            android:text="Paypal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.077"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.379" />
+
+        <RadioButton
+            android:id="@+id/rbGooglePay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickRB"
+            android:text="Google Pay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.077"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rbPaypal"
+            app:layout_constraintVertical_bias="0.226" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="84dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.382"
+        app:srcCompat="@drawable/visa" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="84dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.758"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.376"
+        app:srcCompat="@drawable/mastercard" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="84dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/paypal" />
+
+    <Button
+        android:id="@+id/btnPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickPay"
+        android:text="Pagar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Número do Cartão"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.619" />
+
+    <EditText
+        android:id="@+id/editTextCVV"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Código de Segurança (CVV)"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <Spinner
+        android:id="@+id/spinnerAno"
+        android:layout_width="113dp"
+        android:layout_height="34dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintStart_toEndOf="@+id/spinnerMes"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <Spinner
+        android:id="@+id/spinnerMes"
+        android:layout_width="107dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="19dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.299"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextTitularCartao"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Titular do Cartão"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnPay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCVV" />
+
+    <TextView
+        android:id="@+id/txtPacote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pacote:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.234" />
+
+    <TextView
+        android:id="@+id/txtDataReserva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data da Reserva:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtPacote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPaymentUltimoNome"
+        app:layout_constraintVertical_bias="0.548" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="84dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/gp" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="41dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="353dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onClickBack"
+        android:text="Back"
+        app:layout_constraintBottom_toTopOf="@+id/txtPaymentPrimeiroNome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

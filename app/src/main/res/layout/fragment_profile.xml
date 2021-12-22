@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPNomeUtilizador"
+        app:layout_constraintVertical_bias="1.0"
+        tools:visibility="invisible">
+
+        <TextView
+            android:id="@+id/txtEPPrimeiroNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_first_name"
+            app:layout_constraintBottom_toTopOf="@+id/txtEPUltimoNome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/userinfo_first_name" />
+
+        <TextView
+            android:id="@+id/txtEPUltimoNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_last_name"
+            app:layout_constraintBottom_toTopOf="@+id/txtEPEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEPPrimeiroNome"
+            tools:text="@string/userinfo_last_name" />
+
+        <TextView
+            android:id="@+id/txtEPEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_email"
+            app:layout_constraintBottom_toTopOf="@+id/txtEPNIF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEPUltimoNome"
+            tools:text="@string/userinfo_email" />
+
+        <TextView
+            android:id="@+id/txtEPNIF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_NIF"
+            app:layout_constraintBottom_toTopOf="@+id/txtEPNacionalidade"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEPEmail"
+            tools:text="@string/userinfo_NIF" />
+
+        <TextView
+            android:id="@+id/txtEPNacionalidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_nationality"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtEPMorada"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEPNIF"
+            tools:text="@string/userinfo_nationality" />
+
+        <TextView
+            android:id="@+id/txtEPMorada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_address"
+            app:layout_constraintBottom_toTopOf="@+id/txtEPDataNasc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEPNacionalidade"
+            tools:text="@string/userinfo_address" />
+
+        <TextView
+            android:id="@+id/txtEPDataNasc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_birthday"
+            app:layout_constraintBottom_toTopOf="@+id/txtEPGenero"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEPMorada"
+            tools:text="@string/userinfo_birthday" />
+
+        <TextView
+            android:id="@+id/txtEPGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_gender"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEPDataNasc"
+            tools:text="@string/userinfo_gender" />
+
+        <Spinner
+            android:id="@+id/sGenero"
+            style="@style/Widget.AppCompat.Spinner.DropDown"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:entries="@array/genders_array"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEPGenero"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtEPGenero"
+            app:layout_constraintTop_toTopOf="@+id/txtEPGenero" />
+
+        <EditText
+            android:id="@+id/etPrNome"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="Primeiro Nome"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEPPrimeiroNome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtEPPrimeiroNome" />
+
+        <EditText
+            android:id="@+id/etUlNome"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="Ultimo Nome"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEPUltimoNome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtEPUltimoNome" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="email@email.com"
+            android:inputType="textEmailAddress"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEPEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtEPEmail" />
+
+        <EditText
+            android:id="@+id/etNIF"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="NIF"
+            android:inputType="number"
+            android:maxLength="9"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEPNIF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtEPNIF" />
+
+        <EditText
+            android:id="@+id/etNacionalidade"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="Nacionaldiade"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEPNacionalidade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtEPNacionalidade" />
+
+        <EditText
+            android:id="@+id/etMorada"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="Morada"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEPMorada"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtEPMorada" />
+
+        <EditText
+            android:id="@+id/etDataNasc"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="dd/mm/aaaa"
+            android:inputType="date"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEPDataNasc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/txtEPDataNasc"
+            app:layout_constraintTop_toTopOf="@+id/txtEPDataNasc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myCardView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/roundedImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/userinfo_image"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/surfcampsapplogo"
+            tools:source="@drawable/surfcampsapplogo"
+            tools:srcCompat="@drawable/surfcampsapplogo" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtPNomeUtilizador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/userinfo_profileName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myCardView"
+        tools:text="@string/userinfo_profileName" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_save_changes"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/button_save_changes"
+        tools:visibility="invisible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPNomeUtilizador"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/txtPrPrimeiroNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_first_name"
+            app:layout_constraintBottom_toTopOf="@+id/txtPrUltimoNome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/userinfo_first_name" />
+
+        <TextView
+            android:id="@+id/txtPrUltimoNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_last_name"
+            app:layout_constraintBottom_toTopOf="@+id/txtPrEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPrPrimeiroNome"
+            tools:text="@string/userinfo_last_name" />
+
+        <TextView
+            android:id="@+id/txtPrEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_email"
+            app:layout_constraintBottom_toTopOf="@+id/txtPrNIF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPrUltimoNome"
+            tools:text="@string/userinfo_email" />
+
+        <TextView
+            android:id="@+id/txtPrNIF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_NIF"
+            app:layout_constraintBottom_toTopOf="@+id/txtPrNacionalidade"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPrEmail"
+            tools:text="@string/userinfo_NIF" />
+
+        <TextView
+            android:id="@+id/txtPrNacionalidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_nationality"
+            app:layout_constraintBottom_toTopOf="@+id/txtPrMorada"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPrNIF"
+            tools:text="@string/userinfo_nationality" />
+
+        <TextView
+            android:id="@+id/txtPrMorada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_address"
+            app:layout_constraintBottom_toTopOf="@+id/txtPrDataNasc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPrNacionalidade"
+            tools:text="@string/userinfo_address" />
+
+        <TextView
+            android:id="@+id/txtPrDataNasc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_birthday"
+            app:layout_constraintBottom_toTopOf="@+id/txtPrGenero"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPrMorada"
+            tools:text="@string/userinfo_birthday" />
+
+        <TextView
+            android:id="@+id/txtPrGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/userinfo_gender"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPrDataNasc"
+            tools:text="@string/userinfo_gender" />
+
+        <TextView
+            android:id="@+id/lbPrimeiroNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/lbUltimoNome"
+            app:layout_constraintStart_toEndOf="@+id/txtPrPrimeiroNome"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lbUltimoNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/lbEmail"
+            app:layout_constraintStart_toEndOf="@+id/txtPrUltimoNome"
+            app:layout_constraintTop_toBottomOf="@+id/lbPrimeiroNome" />
+
+        <TextView
+            android:id="@+id/lbEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/lbNIF"
+            app:layout_constraintStart_toEndOf="@+id/txtPrEmail"
+            app:layout_constraintTop_toBottomOf="@+id/lbUltimoNome" />
+
+        <TextView
+            android:id="@+id/lbNIF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/lbNacionalidade"
+            app:layout_constraintStart_toEndOf="@+id/txtPrNIF"
+            app:layout_constraintTop_toBottomOf="@+id/lbEmail" />
+
+        <TextView
+            android:id="@+id/lbNacionalidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/lbMorada"
+            app:layout_constraintStart_toEndOf="@+id/txtPrNacionalidade"
+            app:layout_constraintTop_toBottomOf="@+id/lbNIF" />
+
+        <TextView
+            android:id="@+id/lbMorada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/lbDataNasc"
+            app:layout_constraintStart_toEndOf="@+id/txtPrMorada"
+            app:layout_constraintTop_toBottomOf="@+id/lbNacionalidade" />
+
+        <TextView
+            android:id="@+id/lbDataNasc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/lbGenero"
+            app:layout_constraintStart_toEndOf="@+id/txtPrDataNasc"
+            app:layout_constraintTop_toBottomOf="@+id/lbMorada" />
+
+        <TextView
+            android:id="@+id/lbGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtPrGenero"
+            app:layout_constraintTop_toBottomOf="@+id/lbDataNasc" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBtuttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clInfo">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <Button
+            android:id="@+id/btnEditarPerfil"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:text="@string/button_edit_profile"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/button_edit_profile" />
+
+        <Button
+            android:id="@+id/btnAulas"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/button_classes"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/button_classes" />
+
+        <Button
+            android:id="@+id/btnLogoff"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/button_logoff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/button_logoff" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/txtRegPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/login_passwordtext"
+        app:layout_constraintBottom_toTopOf="@+id/txtRegConfPass"
+        app:layout_constraintEnd_toEndOf="@+id/txtRegUtilizador"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegEmail"
+        tools:text="@string/login_passwordtext" />
+
+    <TextView
+        android:id="@+id/txtRegConfPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/registo_confpass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegPassword"
+        tools:text="@string/registo_confpass" />
+
+    <TextView
+        android:id="@+id/txtRegUtilizador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="@string/login_usertext"
+        app:layout_constraintBottom_toTopOf="@+id/txtRegEmail"
+        app:layout_constraintEnd_toEndOf="@+id/txtRegConfPass"
+        app:layout_constraintTop_toBottomOf="@+id/txt_surfcampsapp3"
+        tools:text="@string/login_usertext" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/surfcampsapp_logo"
+        android:scaleType="centerInside"
+        android:src="@drawable/surfcampsapplogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/surfcampsapplogo"
+        tools:src="@drawable/surfcampsapplogo"
+        tools:srcCompat="@drawable/surfcampsapplogo" />
+
+    <TextView
+        android:id="@+id/txt_surfcampsapp3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/surfcampsapp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtRegUtilizador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:text="@string/surfcampsapp" />
+
+    <TextView
+        android:id="@+id/txtRegEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/userinfo_email"
+        app:layout_constraintBottom_toTopOf="@+id/txtRegPassword"
+        app:layout_constraintEnd_toEndOf="@+id/txtRegUtilizador"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegUtilizador"
+        tools:text="@string/userinfo_email" />
+
+    <EditText
+        android:id="@+id/etRegUtilizador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/txtRegUtilizador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtRegUtilizador" />
+
+    <EditText
+        android:id="@+id/etRegEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="email@email.com"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="@+id/txtRegEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtRegEmail"
+        app:layout_constraintTop_toBottomOf="@+id/etRegUtilizador" />
+
+    <EditText
+        android:id="@+id/etRegPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/txtRegPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtRegPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etRegEmail" />
+
+    <EditText
+        android:id="@+id/etRegConfPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/txtRegConfPass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtRegConfPass"
+        app:layout_constraintTop_toBottomOf="@+id/etRegPass" />
+
+    <Button
+        android:id="@+id/btnRegisto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRegConfPass"
+        tools:text="@string/button_register" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
